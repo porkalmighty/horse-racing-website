@@ -1,0 +1,16 @@
+// overwrite the bootstrap defaults 
+$theme-colors: (
+  "primary": #d81e0c,
+);
+
+// Include bootstrap files
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.megaMenu {
+    position: static;
+    .dropdown-menu {
+        width: 100%;
+        border: 0;
+        box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
+    }
+}
