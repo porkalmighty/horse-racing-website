@@ -1,16 +1,151 @@
 // overwrite the bootstrap defaults 
+$primary-red: #d81e0c;
+$body-color:  #000;
 $theme-colors: (
-  "primary": #d81e0c,
+  "primary": $primary-red,
 );
+$grays:(
+    "100": #f7f7f7,
+);
+
+$container-max-widths: (
+    xl: 1024px,
+);
+$border-radius: .2rem;
+$border-radius-lg: .2rem;
+$body-bg: #0b0b0b;
+
+@font-face {
+    font-family: "Drunk Condensed";
+    src: url("/public/fonts/druk_condensed/DrukCond-Super.otf");
+}
+
+@font-face {
+    font-family: "Euclid Flex";
+    src: url("/public/fonts/euclid_flex_font/EuclidFlex-Regular.otf");
+}
+
+$font-family-base: "Euclid Flex", sans-serif;
+$headings-font-family: "Drunk Condensed";
 
 // Include bootstrap files
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.left {
+    position: absolute;
+    left: 9999999px;
+}
+
+.wrapper {
+    padding: 0;
+}
+
+.navbar {
+    li {
+        a{text-transform: uppercase;}
+    }
+}
+
+main {
+    section {
+        background-color: $gray-100;
+    }
+}
+
+.slider {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 380px;
+    background-image: url(../images/banner_slider.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+
+    .slider__contents {
+        margin-left: 20px;
+    
+        h2{
+            font-size: 5.7em;
+            text-transform: uppercase;
+            line-height: 80px;
+            white-space: pre-line;
+    
+            span {
+                color: $primary-red;
+            }
+        }
+
+        p {
+            font-size: 1.05rem;
+        }
+    
+        form {
+            * {
+                margin-right: 10px;
+            }
+        
+            select {
+                width: 180px;
+                height: 40px;
+                padding: 10px;
+            }
+        
+            button {
+                width: 135px;
+                height: 40px;
+            }
+        }
+    }
+
+}
+
+header
 
 .megaMenu {
     position: static;
     .dropdown-menu {
         width: 100%;
+        padding: 0 15px 90px;
         border: 0;
         box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
+
+        .mega-links {
+            display: flex;
+            align-items: center;
+            
+            li {
+                a {
+                    text-transform: capitalize;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .mega-image {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
+            a, p {padding: 0;margin:0;}
+            a {font-size: 1.25em;}
+            p {font-size: 0.875em;}
+        }
     }
 }
