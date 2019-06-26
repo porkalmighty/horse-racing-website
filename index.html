@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assessment</title>
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <h1 class="left">LOGO</h1>
-                    <a class="navbar-brand" href="#">Logo</a>
+                    <a class="navbar-brand" href="#"><img class="img-fluid" src="/public/images/LOGO.png" alt="logo image"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -150,7 +151,7 @@
                     </form>
                 </div>
                 <div class="slider__controls col-md-6">
-                    <div class="slider-detail">
+                    <div class="slider__detail">
                         <h3>Event Name</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
@@ -165,7 +166,7 @@
             </section>
             <section class="col" id="events">
                 <!-- event -->
-                <header class="section-title">
+                <header class="section__title">
                     <h2>Plan your Event</h2>
                     <span>We host any type of event</span>
                 </header>
@@ -173,8 +174,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <!-- Corporate -->
-                            <div class="image-container">
-                                <div class="image-overlay">
+                            <div class="image__container">
+                                <div class="image__overlay">
                                     <h3>Corporate</h3>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         <a href="#" class="btn btn-link event-btn">Learn More</a>
@@ -184,8 +185,8 @@
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <!-- Social Parties -->
-                            <div class="image-container">
-                                <div class="image-overlay">
+                            <div class="image__container">
+                                <div class="image__overlay">
                                         <h3>Social Parties</h3>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         <a href="#" class="btn btn-link event-btn">Learn More</a>
@@ -195,8 +196,8 @@
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
                             <!-- Weddings & Special Events -->
-                            <div class="image-container">
-                                <div class="image-overlay">
+                            <div class="image__container">
+                                <div class="image__overlay">
                                     <h3>Weddings & Special Events</h3>
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                                     <a href="#" class="btn btn-link event-btn">Learn More</a>
@@ -209,15 +210,15 @@
             </section>
             <section class="col" id="locations">
                 <!-- locations -->
-                <header class="section-title">
+                <header class="section__title">
                     <h2>Locations</h2>
                     <span>Our team will assist you in coordinating your next meeting, client appreciation event, cocktail reception, tradeshow or fundraising gala.</span>
                 </header>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4 loc-entry">
-                            <div class="image-container">
-                                <div class="image-overlay">
+                            <div class="image__container">
+                                <div class="image__overlay">
                                     <p>New York</p>
                                     <h3>Racetrack</h3>                            
                                 </div>
@@ -225,8 +226,8 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4 loc-entry">
-                            <div class="image-container">
-                                <div class="image-overlay">
+                            <div class="image__container">
+                                <div class="image__overlay">
                                     <p>London</p>
                                     <h3>ABCD Racetrack at London</h3>                            
                                 </div>
@@ -234,8 +235,8 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4 loc-entry">
-                            <div class="image-container">
-                                <div class="image-overlay">
+                            <div class="image__container">
+                                <div class="image__overlay">
                                     <p>Vaughan</p>
                                     <h3>Stadium Bar</h3>                            
                                 </div>
@@ -247,9 +248,83 @@
             </section>
             <section class="col" id="blogs">
                 <!-- blogs -->
-                <header class="section-title text-left">
-                    <h2>Blogs</h2>
+                <header class="section__title text-right">
+                    <h2 class="text-left">Blogs</h2>
+                    <span class="text-right"><a href="#">View All</a></span>
                 </header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 blog-entry">
+                            <div class="blog__container">
+                                <div class="blog__thumbnail">
+                                    <img class="img-fluid" src="/public/images/blog_01.png" alt="photo of people having a picnic">
+                                </div>
+                                <div class="blog__description">
+                                    <p class="date">April 4, 2019</p>
+                                    <h3>9 tips for Hosting Private Events at Your Venue</h3>
+                                </div>
+                                <div class="blog__overlay">
+                                    <div class="overlay__description">
+                                        <div class="overlay__title">
+                                            <p>Featured | April 4, 2019</p>
+                                            <h4>9 tips for Hosting Private Events at Your Venue</h4>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad litora torquent per conubia nostra,.</p>
+                                    </div>
+                                    <div class="overlay__footer">
+                                        <a href="#" target="_blank">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 blog-entry">
+                            <div class="blog__container">
+                                <div class="blog__thumbnail">
+                                    <img class="img-fluid" src="/public/images/blog_02.png" alt="photo of a man presenting in a room">
+                                </div>
+                                <div class="blog__description">
+                                    <p class="date">April 4, 2019</p>
+                                    <h3>9 tips for Hosting Private Events at Your Venue</h3>
+                                </div>
+                                <div class="blog__overlay">
+                                    <div class="overlay__description">
+                                        <div class="overlay__title">
+                                            <p>Featured | April 4, 2019</p>
+                                            <h4>9 tips for Hosting Private Events at Your Venue</h4>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad litora torquent per conubia nostra,.</p>
+                                    </div>
+                                    <div class="overlay__footer">
+                                        <a href="#" target="_blank">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 blog-entry">
+                            <div class="blog__container">
+                                <div class="blog__thumbnail">
+                                    <img class="img-fluid" src="/public/images/blog_01.png" alt="photo of people having a picnic">
+                                </div>
+                                <div class="blog__description">
+                                    <p class="date">April 4, 2019</p>
+                                    <h3>9 tips for Hosting Private Events at Your Venue</h3>
+                                </div>
+                                <div class="blog__overlay">
+                                    <div class="overlay__description">
+                                        <div class="overlay__title">
+                                            <p>Featured | April 4, 2019</p>
+                                            <h4>9 tips for Hosting Private Events at Your Venue</h4>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad litora torquent per conubia nostra,.</p>
+                                    </div>
+                                    <div class="overlay__footer">
+                                        <a href="#" target="_blank">Read More</a>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="col" id="testimonials">
                 <!-- testimonials -->

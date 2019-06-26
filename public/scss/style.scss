@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: "Euclid Flex Light";
+    src: url("/public/fonts/euclid_flex_font/EuclidFlex-Light.otf");
+}
+
+@font-face {
     font-family: "Euclid Flex";
     src: url("/public/fonts/euclid_flex_font/EuclidFlex-Regular.otf");
 }
@@ -37,9 +42,11 @@ $body-bg: #0b0b0b;
 $bottom-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
 
 $drunk-condensed: "Drunk Condensed";
+$euclid-light: "Euclid Flex Light";
+$euclid-regular: "Euclid Flex";
 $euclid-medium: "Euclid Flex Medium";
 $euclid-bold: "Euclid Flex Bold";
-$font-family-base: "Euclid Flex", sans-serif;
+$font-family-base: $euclid-regular, sans-serif;
 $headings-font-family: $euclid-bold;
 
 // Include bootstrap files
@@ -83,6 +90,7 @@ main {
         width: 100%;
         padding: 0 15px 90px;
         border: 0;
+        margin-top: 0;
         box-shadow: $bottom-shadow;
 
         .mega-links {
@@ -133,7 +141,7 @@ main {
     
         h2{
             font-size: 6em;
-            margin-top: 0.875em;
+            margin-top: 2.4rem;
             text-transform: uppercase;
             line-height: 80px;
             white-space: pre-line;
@@ -185,7 +193,7 @@ main {
         justify-content: flex-end;
         
 
-        .slider-detail {
+        .slider__detail {
             width: 180px;
             height: 130px;
             background-color: #fff;
@@ -233,7 +241,7 @@ main {
 
 }
 
-.section-title {
+.section__title {
     text-align: center;
     margin: 2em 1em;
     
@@ -247,10 +255,10 @@ main {
     }
 }
 #events {
-    .image-container {
+    .image__container {
         position: relative;
     
-        .image-overlay {
+        .image__overlay {
             color: #fff;
             position: absolute;
             width: 100%;
@@ -306,13 +314,13 @@ main {
         display: flex;
     }
 
-    .image-container{
+    .image__container{
         margin: 0 auto;
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
-        .image-overlay {
+        .image__overlay {
             width: 50%;
             position: absolute;
             color: #fff;
@@ -327,6 +335,89 @@ main {
             h3 {
                 font-size: 1.5em;
             }
+        }
+    }
+}
+
+#blogs {
+    .section__title {
+        margin-bottom: 0.6875rem;
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+
+    .blog__container {
+        position: relative;
+
+        .blog__description {
+            padding: 20px;
+            background-color: #fff;
+            h3 {
+                font-size: 1rem;
+                font-family: $euclid-medium;
+            }
+
+            p {
+                font-size: .875rem;
+                margin-bottom: .625rem;
+            }
+        }
+
+        .blog__overlay {
+            position: absolute;
+            top: 0;
+            left: -9999999px;
+            height: 100%;
+            background-color: #aa0100;
+            color: #fff;
+            padding: 20px 40px 20px 20px;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+
+            .overlay__description {
+                p{
+                    font-family: $euclid-light;
+                    font-size: 0.9375rem;
+                }
+
+                .overlay__title {
+                    p {
+                        font-size: 0.875rem;
+                        margin-bottom: 0.625rem;
+                        font-family: $euclid-light;
+                    }
+    
+                    h4 {
+                        font-size: 1rem;
+                        font-family: $euclid-regular;
+                    }
+                }
+            }
+
+            .overlay__footer{
+                position: absolute;
+                bottom: 20px;
+
+                a{
+                    font-family: $euclid-light;
+                    font-size: 0.875rem;
+                    text-transform: uppercase;
+                    color: #fff; 
+                    &:hover {
+                        color: #fff; 
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+
+        &:hover .blog__overlay {
+            left: 0;
         }
     }
 }
