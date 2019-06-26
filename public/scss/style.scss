@@ -74,6 +74,10 @@ html {
     li {
         a{text-transform: uppercase;}
     }
+
+    .navbar-brand {
+        margin-left: 1rem;
+    }
 }
 
 main {
@@ -83,6 +87,11 @@ main {
     section {
         padding: 20px 0 0;
     }
+}
+
+
+.learn-mobile {
+    display: none;
 }
 
 #mainMenu {
@@ -124,6 +133,7 @@ main {
         padding: 0 15px 90px;
         border: 0;
         margin-top: 0;
+        padding-left: 30px;
         box-shadow: $bottom-shadow;
 
         .mega-links {
@@ -133,7 +143,7 @@ main {
             li {
                 a {
                     text-transform: capitalize;
-                    font-weight: bold;
+                    font-family: $euclid-bold;
                     font-size: 1.1rem;
                 }
             }
@@ -297,10 +307,15 @@ main {
         font-size: 0.875em;
     }
 }
+
 #events {
     .image__container {
         position: relative;
-    
+        
+        img {
+            width: 100%;
+        }
+
         .image__overlay {
             color: #fff;
             position: absolute;
@@ -405,6 +420,12 @@ main {
 
     .blog__container {
         position: relative;
+
+        .blog__thumbnail {
+            img {
+                width: 100%;
+            }
+        }
 
         .blog__description {
             padding: 20px;
@@ -531,7 +552,9 @@ footer {
         //background: repeating-linear-gradient(-55deg,#000 656px,#000 645px,#1a1a1a 200px,#1a1a1a 786px,#000 230px, #000);
     
         .footer-logo {
-            padding: 10px;
+            img {
+                padding: 10px;
+            }
         }
     }
 
@@ -594,29 +617,92 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .slider {
-        .slider__contents {
-            background: rgba(255,255,255,.6);
-            padding: 20px;
-            border-radius: $border-radius;
-        }
-        .slider__detail {
-            display: none;
-        }
+#bookVenue {
+    .modal-header,
+    .modal-footer {
+        border: none;
+    }
 
-        .slider__controls {
-            right: 0px;
-            bottom: 10px;
+    button.close {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    .modal-header {
+        padding-bottom: 0;
+        h5 {
+            font-size: 1.8rem;
         }
+    }    
+
+    .modal-footer {
+        button {
+            border: 1px solid $primary-red;
+            font-family: $euclid-medium;
+            margin: 0 auto;
+            padding: 10px;
+            width: 140px;
+            font-size: 0.875rem; 
+            text-transform: uppercase;
+        }
+    }
+
+    .modal-content {
+        padding: 20px;
+        border-radius: 0;
+        max-width: 660px;
+        margin: 0 auto;
+
+        .section__title {
+            margin: 20px 0 0;
+            text-align: left;
+            border-bottom: 2px solid #d8d8d8;
+            
+            h6 {
+                font-size: 0.875rem;      
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .row {
+        .col {
+            margin: 10px auto;
+
+            .form-control-lg {
+                font-size: 1rem;
+            }
+        }
+        .query {
+            margin: 10px auto 0;
+        }
+        .qmsg {
+            margin: 0 auto;
+        }
+    }
+}
+
+.queryRB {
+    width: 100%;
+
+    .query__btn {
+        padding: 10px 20px;
+        background-color: #000;
+        color: #fff;
+
+        &.active {
+            background-color: $primary-red;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .learn-mobile {
+        display: block;
     }
 
     .learn-desktop {
         display: none;
-    }
-
-    .learn-mobile {
-        display: block;
     }
 
     .megaMenu {
@@ -637,6 +723,24 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        .slider__contents {
+            background: rgba(255,255,255,.6);
+            padding: 20px;
+            border-radius: $border-radius;
+        }
+        .slider__detail {
+            display: none;
+        }
+
+        .slider__controls {
+            right: 0px;
+            bottom: 10px;
         }
     }
 
@@ -724,6 +828,44 @@ footer {
 
                 &:hover {
                     left: 20%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #locations {
+        .image__container {
+            .image__overlay {
+                width: 45%;
+
+                &:hover {
+                    left: 15%;
+                }
+            }
+        }
+    }
+
+    #bookVenue .row .col {
+        flex: 1 100%;
+    }
+
+    .queryRB {
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    #locations {
+        .image__container {
+            .image__overlay {
+                width: 50%;
+
+                &:hover {
+                    left: 5px;
                 }
             }
         }

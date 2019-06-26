@@ -78,6 +78,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- hidden menu -->
                         <li class="nav-item dropdown megaMenu learn-mobile">
                             <a class="nav-link dropdown-toggle" href="#" id="mainDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Learn More
@@ -105,6 +106,7 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button></li>
+                        <!-- desktop menu -->
                         <li class="nav-item dropdown megaMenu learn-desktop">
                             <a class="nav-link" href="#" id="mainDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bars learn-more"></i>
@@ -336,7 +338,7 @@
                                         <a href="#" target="_blank">Read More</a>
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -437,7 +439,7 @@
         </footer>
         <!-- book a venue modal -->
         <div class="modal fade" id="bookVenue" tabindex="-1" role="dialog" aria-labelledby="bookModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bookModal">Book an Event</h5>
@@ -446,16 +448,81 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="col">
-                                <input type="text" class="form-control form-control-lg" placeholder="First name">
-                                </div>
-                                <div class="col">
-                                <input type="text" class="form-control form-control-lg" placeholder="Last name">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control form-control-lg" placeholder="First name *">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control form-control-lg" placeholder="Last name *">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="email" class="form-control form-control-lg" placeholder="Email *">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control form-control-lg" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <header class="section__title">
+                                    <h6>About your Event</h6>
+                                </header>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control form-control-lg">
+                                    <option selected>Event Date</option>
+                                    <option value="1">Corporate</option>
+                                    <option value="2">Social Parties</option>
+                                    <option value="3">Special Events</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-control form-control-lg">
+                                    <option value="1" selected>Corporate Event</option>
+                                    <option value="2">Social Parties</option>
+                                    <option value="3">Special Events</option>
+                                </select>  
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control form-control-lg">
+                                    <option selected>Location</option>
+                                    <option value="1">New York</option>
+                                    <option value="2">London</option>
+                                    <option value="3">Vaughan</option>
+                                </select>  
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control form-control-lg" placeholder="Number of Guests">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col query">
+                                <div class="btn-group btn-group-toggle queryRB" data-toggle="buttons">
+                                    <label class="btn query__btn active">
+                                        <input type="radio" name="options" id="rbQuote" autocomplete="off" value="quote" checked> Get a Quote
+                                    </label>
+                                    <label class="btn query__btn">
+                                        <input type="radio" name="options" id="rbTour" autocomplete="off" value="tour"> Book a Tour
+                                    </label>
+                                    <label class="btn query__btn">
+                                        <input type="radio" name="options" id="rbAsk" autocomplete="off" value="ask"> Ask a Question
+                                    </label>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="row">
+                            <div class="col qmsg">
+                                <textarea name="queryMSG" id="queryMsg" class="form-control form-control-lg" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-link">Submit</button>
