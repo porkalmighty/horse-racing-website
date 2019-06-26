@@ -78,22 +78,37 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="nav-item dropdown megaMenu learn-mobile">
+                            <a class="nav-link dropdown-toggle" href="#" id="mainDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Learn More
+                            </a>
+                            <div class="dropdown-menu collapse">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12 more-links mega-links">
+                                            <ul>
+                                                <li><a class="dropdown-item" href="#">Contact</a></li>
+                                                <li><a class="dropdown-item" href="#">FAQs</a></li>
+                                                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                                                <li><a class="dropdown-item" href="#">About</a></li>
+                                                <li><a class="dropdown-item" href="#">Partnership</a></li>
+                                                <li><a class="dropdown-item" href="#">Blogs</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Menu</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown megaMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><button class="btn my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button></li>
+                        <li class="nav-item dropdown megaMenu learn-desktop">
                             <a class="nav-link" href="#" id="mainDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="navbar-toggler-icon"></span>
+                                <i class="fas fa-bars learn-more"></i>
                             </a>
-                            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainDropdown" aria-controls="mainDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span> -->
-                            </button>
                             <div class="dropdown-menu collapse">
                                 <div class="container">
                                     <div class="row">
@@ -119,7 +134,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-primary btn-lg" href="#">Book a venue</a>
+                            <a class="nav-link btn btn-primary btn-lg book-btn" data-toggle="modal" data-target="#bookVenue" href="#">Book a venue</a>
                         </li>
                     </ul>
                     </div>
@@ -172,7 +187,7 @@
                 </header>
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="col-xs-12 col-sm-6 col-md-4 event-entry">
                             <!-- Corporate -->
                             <div class="image__container">
                                 <div class="image__overlay">
@@ -183,7 +198,7 @@
                                 <img class="img-fluid" src="/public/images/corporate.png" alt="photo of two men in suit talking to each other">
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="col-xs-12 col-sm-6 col-md-4 event-entry">
                             <!-- Social Parties -->
                             <div class="image__container">
                                 <div class="image__overlay">
@@ -194,7 +209,7 @@
                                 <img class="img-fluid" src="/public/images/social.png" alt="photo of people socializing in a party">
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="col-xs-12 col-sm-6 col-md-4 event-entry">
                             <!-- Weddings & Special Events -->
                             <div class="image__container">
                                 <div class="image__overlay">
@@ -328,32 +343,128 @@
             </section>
             <section class="col" id="testimonials">
                 <!-- testimonials -->
-
-                <aside>
+                <header class="section__title">
+                    <h2>Testimonials</h2>
+                </header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4 testimonial-entry">
+                            <div class="client__testimonial">
+                                <div class="testimonial">
+                                    <p>Lorem ipsum dolor sit amet!</p>
+                                    <p class="client__name">Albert - Birthday</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 testimonial-entry">
+                            <div class="client__testimonial">
+                                <div class="testimonial">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ad litora torquent per conubia nostra,.</p>
+                                    <p class="client__name">Mickey and Minnie - Wedding</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 testimonial-entry">
+                            <div class="client__testimonial">
+                                <div class="testimonial">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="client__name">Tina - Corporate Reception</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col">
                     <!-- clients -->
+                    <header class="section__title">
+                        <h3>Clients who host events with us</h3>
+                    </header>       
+                    <div class="clients text-center">
+                        <img class="img-fluid" src="/public/images/testimonials_clients.png" alt="">
+                    </div>
                 </aside>
             </section>
         </main>
         <footer>
-            <section>
-                <div class="col-sm-12 col-md-3">
-                    <!-- logo -->
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <!-- learn more -->
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <!-- company -->
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <!-- social media -->
+            <section class="col footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3 footer-logo">
+                            <!-- logo -->
+                            <h2 class="left">company logo</h2>
+                            <img class="img-fluid" src="/public/images/footer_logo.png" alt="logo image">
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <!-- learn more -->
+                            <h2>Learn more</h2>
+                            <ul>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <!-- company -->
+                            <h2>Company</h2>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Accessibility</a></li>
+                                <li><a href="#">Partnership</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-12 col-md-3">
+                            <!-- social media -->
+                            <h2>Follow Us</h2>
+                            <ul id="social-media">
+                                <li><a href="#" target="_blank"><img src="/public/images/twitter.png" alt="twitter logo"></a></li>
+                                <li><a href="#" target="_blank"><img src="/public/images/instagram.png" alt=""></a></li>
+                                <li><a href="#" target="_blank"><img src="/public/images/youtube.png" alt=""></a></li>
+                                <li><a href="#" target="_blank"><img src="/public/images/facebook.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section class="col copyright">
                 <!-- copyright -->
+                <span class="darker">Copyright &copy; 2019</span> Hosting on Track
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
             </section>
         </footer>
+        <!-- book a venue modal -->
+        <div class="modal fade" id="bookVenue" tabindex="-1" role="dialog" aria-labelledby="bookModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModal">Book an Event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                <input type="text" class="form-control form-control-lg" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                <input type="text" class="form-control form-control-lg" placeholder="Last name">
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link">Submit</button>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
+<script src="https://kit.fontawesome.com/cce5f8ef55.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

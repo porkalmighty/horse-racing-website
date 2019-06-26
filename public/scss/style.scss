@@ -25,7 +25,7 @@
 
 // overwrite the bootstrap defaults 
 $primary-red: #d81e0c;
-$body-color:  #000;
+$body-color:  #0b0b0b;
 $theme-colors: (
   "primary": $primary-red,
 );
@@ -78,9 +78,42 @@ html {
 
 main {
     background-color: $gray-100;
-    
+    padding-bottom: 60px;
+
     section {
         padding: 20px 0 0;
+    }
+}
+
+#mainMenu {
+    .nav-item {
+        margin: 0 10px;
+        a.nav-link.book-btn {
+            color: #fff;
+            font-size: 0.875rem;
+            width: 160px;
+            height: 40px;
+            padding: 10px;
+        }
+    
+        a.nav-link {
+            font-size: 0.875rem;
+            color: #000;
+        }
+    }
+
+    .learn-more {
+        font-size: 1.5rem;
+    }
+}
+
+.mega-entry {
+    h3 {
+        font-size: 1.1rem;
+        font-family: $euclid-medium;
+    }
+    p {
+        font-size: 0.875rem;
     }
 }
 
@@ -101,8 +134,17 @@ main {
                 a {
                     text-transform: capitalize;
                     font-weight: bold;
+                    font-size: 1.1rem;
                 }
             }
+        }
+
+        .more-links {
+            align-items: flex-start;
+        }
+
+        .mega-entry, .more-links {
+            padding-top: 40px;
         }
 
         .mega-image {
@@ -170,6 +212,7 @@ main {
 
             .custom-select {
                 background: url("/public/images/banner_down_chevron.png") no-repeat right .75rem center;
+                background-color: #fff;
             }
         
             button {
@@ -245,7 +288,7 @@ main {
     text-align: center;
     margin: 2em 1em;
     
-    h2{
+    h2, h3{
         text-transform: uppercase;
         font-size: 1.5rem;
     }
@@ -335,6 +378,17 @@ main {
             h3 {
                 font-size: 1.5em;
             }
+
+            &:hover {
+                left: 20px;
+                color: $primary-red;
+
+                & p::after {
+                    content: url("/public/images/red_chevron.png");
+                    padding-left: 10px;
+                    vertical-align: middle;
+                }
+            }
         }
     }
 }
@@ -418,6 +472,260 @@ main {
 
         &:hover .blog__overlay {
             left: 0;
+        }
+    }
+}
+
+#testimonials {
+    .testimonial-entry {
+        .client__testimonial {
+            background-color: #fff;
+            padding: 15px 10px 10px;
+
+            .testimonial {
+                padding: 0px 20px;
+            }
+
+            .client__name {
+                text-align: center;
+                font-family: $euclid-medium;
+            }
+
+            &::before {
+                content: url("/public/images/testimonials.png");
+            }
+ 
+        }
+
+        &:nth-of-type(1) .client__testimonial{
+            border-bottom: 2px solid #f9b700;
+        }
+        
+        &:nth-of-type(2) .client__testimonial{
+            border-bottom: 2px solid #51ccd4;
+        }
+        
+        &:nth-of-type(3) .client__testimonial{
+            border-bottom: 2px solid #2e85d7;
+        }
+    }
+
+    aside {
+        .section__title {
+            margin-bottom: 1rem;
+
+            h3{
+                font-size: 1.1rem;
+                font-family: $euclid-medium;
+            }
+        }
+    }
+}
+
+footer {
+    .footer-widgets {
+        height: 230px;
+        padding: 40px 0;
+        background-color: #000;
+        // can't replicate the gradient on the design
+        //background: repeating-linear-gradient(-55deg,#000 656px,#000 645px,#1a1a1a 200px,#1a1a1a 786px,#000 230px, #000);
+    
+        .footer-logo {
+            padding: 10px;
+        }
+    }
+
+    h2 {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: $primary-red;
+        font-family: $euclid-medium;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px
+        }
+
+        a {
+            color: #fff;
+            font-size: 0.9875rem;
+        }
+    }
+
+    #social-media {
+        display: inline-flex;
+
+        li {
+            margin-right: 10px;
+        }
+    }
+
+    .copyright {
+        background-color: #0b0b0b;
+        color: #909090;
+        font-size: 0.875rem;
+        font-family: $euclid-light;
+        border-top: 1px solid #282828;
+        padding-top: 5px;
+        padding-bottom: 5px; 
+
+        .darker {
+            color:#76787d;
+        }
+
+        ul {
+            display: inline-flex;
+            list-style: none;
+            margin-bottom: 0;
+            margin-left: 10px;
+            li {
+                margin: 0 20px;
+
+                a {
+                    color: #909090;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        .slider__contents {
+            background: rgba(255,255,255,.6);
+            padding: 20px;
+            border-radius: $border-radius;
+        }
+        .slider__detail {
+            display: none;
+        }
+
+        .slider__controls {
+            right: 0px;
+            bottom: 10px;
+        }
+    }
+
+    .learn-desktop {
+        display: none;
+    }
+
+    .learn-mobile {
+        display: block;
+    }
+
+    .megaMenu {
+        .dropdown-menu {
+            padding-bottom: 0px; 
+            .mega-image {
+                display: none;
+            }
+
+            .more-links {
+                padding-top: 0px;
+            }
+
+            .mega-links {
+                li {
+                    a {
+                        font-size: 0.875em;
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .event-entry,
+    .loc-entry,
+    .blog-entry,
+    .testimonial-entry {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        .footer-widgets {
+            height: auto;
+    
+            img {
+                width: auto;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .slider {
+        background-position: left;
+        background-size: cover;
+        .slider__controls {
+            display: none;
+        }
+    }
+
+    #locations {
+        .image__container {
+            .image__overlay {
+                &:hover {
+                    left: 5px;
+                }
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+
+        .copyright {
+            ul {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .slider {
+        height: auto;
+        padding: 20px;
+
+        .slider__contents {
+            margin: 0;
+        }
+    }
+
+    #sliderForm {
+        flex-flow: column;
+
+        button,
+        select {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    #locations {
+        .image__container {
+            .image__overlay {
+                width: 30%;
+
+                &:hover {
+                    left: 20%;
+                }
+            }
         }
     }
 }
