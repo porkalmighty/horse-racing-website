@@ -73,7 +73,7 @@ main {
     background-color: $gray-100;
     
     section {
-        padding: 50px 0;
+        padding: 20px 0 0;
     }
 }
 
@@ -236,55 +236,96 @@ main {
 .section-title {
     text-align: center;
     margin: 2em 2em 1em;
+    
+    h2{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    span{
+        font-size: 0.875em;
+    }
+}
+#events {
+    .image-container {
+        position: relative;
+    
+        .image-overlay {
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            padding: 0 20px 20px;
+            background-color: rgba(0,0,0,0.5);
+    
+            h3 {
+                font-size: 1.5em;
+            }
+    
+            p {
+                font-size: 0.875em;
+                width: 80%;
+            }
+    
+            a.event-btn {
+                width: 140px;
+                height: 40px;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: left;
+                font-size: .875em;
+                border: 2px solid #fff;
+                padding: 10px;
+                position: relative;
+    
+                &:hover{
+                    background-color: $primary-red;
+                    border-color: $primary-red;
+                    text-decoration: none;
+                }
+    
+                &::after{
+                    content: url("/public/images/right_chevron.png");
+                    height: 11px;
+                    width: 8px;
+                    margin: 3px;
+                    position: absolute;
+                    right: 5px;
+                }
+            }
+        }
+    }
 }
 
-.image-container {
-    position: relative;
 
-    .image-overlay {
-        color: #fff;
-        position: absolute;
-        width: 100%;
-        height: 100%;
+#locations {
+    .loc-entry {
         display: flex;
-        flex-flow: column;
-        justify-content: flex-end;
-        padding: 0 20px 20px;
-        background-color: rgba(0,0,0,0.5);
+    }
 
-        h3 {
-            font-size: 1.5em;
-        }
+    .image-container{
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
-        p {
-            font-size: 0.875em;
-            width: 80%;
-        }
-
-        a.event-btn {
-            width: 140px;
-            height: 40px;
+        .image-overlay {
+            width: 50%;
+            position: absolute;
             color: #fff;
-            text-transform: uppercase;
-            text-align: left;
-            font-size: .875em;
-            border: 2px solid #fff;
-            padding: 10px;
-            position: relative;
+            background-color: black;
+            height: auto;
+            padding: 10px 20px;
 
-            &:hover{
-                background-color: $primary-red;
-                border-color: $primary-red;
-                text-decoration: none;
+            p {
+                margin-bottom: 0.625em;
             }
 
-            &::after{
-                content: url("/public/images/right_chevron.png");
-                height: 11px;
-                width: 8px;
-                margin: 3px;
-                position: absolute;
-                right: 5px;
+            h3 {
+                font-size: 1.5em;
             }
         }
     }
