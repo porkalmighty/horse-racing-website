@@ -1,26 +1,26 @@
 @font-face {
     font-family: "Drunk Condensed";
-    src: url("/public/fonts/druk_condensed/DrukCond-Super.otf");
+    src: url("../fonts/druk_condensed/DrukCond-Super.otf");
 }
 
 @font-face {
     font-family: "Euclid Flex Light";
-    src: url("/public/fonts/euclid_flex_font/EuclidFlex-Light.otf");
+    src: url("../fonts/euclid_flex_font/EuclidFlex-Light.otf");
 }
 
 @font-face {
     font-family: "Euclid Flex";
-    src: url("/public/fonts/euclid_flex_font/EuclidFlex-Regular.otf");
+    src: url("../fonts/euclid_flex_font/EuclidFlex-Regular.otf");
 }
 
 @font-face {
     font-family: "Euclid Flex Medium";
-    src: url("/public/fonts/euclid_flex_font/EuclidFlex-Medium.otf");
+    src: url("../fonts/euclid_flex_font/EuclidFlex-Medium.otf");
 }
 
 @font-face {
     font-family: "Euclid Flex Bold";
-    src: url("/public/fonts/euclid_flex_font/EuclidFlex-Bold.otf");
+    src: url("../fonts/euclid_flex_font/EuclidFlex-Bold.otf");
 }
 
 // overwrite the bootstrap defaults 
@@ -221,7 +221,7 @@ main {
             }
 
             .custom-select {
-                background: url("/public/images/banner_down_chevron.png") no-repeat right .75rem center;
+                background: url("../images/banner_down_chevron.png") no-repeat right .75rem center;
                 background-color: #fff;
             }
         
@@ -274,17 +274,17 @@ main {
                     margin-right: 15px;
 
                     &::before {
-                        content: url("/public/images/unselected.png");
+                        content: url("../images/unselected.png");
                         width: 10px;
                         height: 10px;
                     }
 
                     &.active::before{
-                        content: url("/public/images/selected.png");
+                        content: url("../images/selected.png");
                     }
 
                     &.slide-control-pause::before{
-                        content: url("/public/images/pause.png");
+                        content: url("../images/pause.png");
                     }
                 }
             }
@@ -354,7 +354,7 @@ main {
                 }
     
                 &::after{
-                    content: url("/public/images/right_chevron.png");
+                    content: url("../images/right_chevron.png");
                     height: 11px;
                     width: 8px;
                     margin: 3px;
@@ -399,7 +399,7 @@ main {
                 color: $primary-red;
 
                 & p::after {
-                    content: url("/public/images/red_chevron.png");
+                    content: url("../images/red_chevron.png");
                     padding-left: 10px;
                     vertical-align: middle;
                 }
@@ -513,7 +513,7 @@ main {
             }
 
             &::before {
-                content: url("/public/images/testimonials.png");
+                content: url("../images/testimonials.png");
             }
  
         }
